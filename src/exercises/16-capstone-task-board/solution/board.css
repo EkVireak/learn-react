@@ -1,0 +1,111 @@
+/* Plain global CSS, scoped by the .task-board root class. */
+.task-board {
+  display: grid;
+  gap: 16px;
+}
+.task-board h1 {
+  margin: 0;
+}
+.task-board .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.task-board .new-task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.task-board .error {
+  color: var(--danger);
+  flex-basis: 100%;
+}
+.task-board .columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  .task-board .columns {
+    grid-template-columns: 1fr;
+  }
+}
+.task-board .column {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+.task-board .column h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+.task-board .column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.task-board .count,
+.task-board .empty {
+  color: var(--muted);
+  font-weight: normal;
+}
+.task-board .card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.task-board .card a {
+  flex: 1;
+  color: var(--text);
+}
+.task-board .badge {
+  font-size: 0.75rem;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+.task-board .badge.high {
+  background: rgb(198 40 40 / 0.15);
+}
+.task-board .badge.low {
+  background: rgb(46 125 50 / 0.15);
+}
+.task-board .danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+.task-board .detail dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+}
+.task-board .detail dt {
+  color: var(--muted);
+}
+.task-board .detail dd {
+  margin: 0;
+}
+.task-board .toasts {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: grid;
+  gap: 8px;
+}
+.task-board .toast {
+  margin: 0;
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 14px;
+  border-radius: 8px;
+}

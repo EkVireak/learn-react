@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Set up the project",
+      "description": "Vite + React + TypeScript, ESLint/oxlint, Prettier, Vitest.",
+      "status": "done",
+      "priority": "high",
+      "createdAt": "2026-11-01T09:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Build the board layout",
+      "description": "Three columns: To do, In progress, Done.",
+      "status": "doing",
+      "priority": "medium",
+      "createdAt": "2026-11-02T09:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Write tests",
+      "description": "Cover creating, moving and deleting tasks.",
+      "status": "todo",
+      "priority": "high",
+      "createdAt": "2026-11-02T10:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Polish styles",
+      "description": "Make it look nice in light and dark mode.",
+      "status": "todo",
+      "priority": "low",
+      "createdAt": "2026-11-03T08:00:00.000Z"
+    }
+  ]
+}
