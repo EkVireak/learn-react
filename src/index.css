@@ -7,6 +7,8 @@
   --accent: #6b3fd6;
   --accent-soft: rgba(107, 63, 214, 0.1);
   --danger: #c62828;
+  --task-bg: #fff6d6;
+  --task-border: #e9b949;
   --radius: 8px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, 'SF Mono', Consolas, monospace;
@@ -27,6 +29,8 @@
     --accent: #a98bff;
     --accent-soft: rgba(169, 139, 255, 0.14);
     --danger: #ff6b6b;
+    --task-bg: #3a3014;
+    --task-border: #b8901f;
   }
 }
 
@@ -130,7 +134,6 @@ button:hover {
   font-size: 0.9rem;
 }
 .readme {
-  white-space: pre-wrap;
   font-family: var(--mono);
   font-size: 0.9rem;
   background: var(--surface);
@@ -138,6 +141,45 @@ button:hover {
   border-radius: var(--radius);
   padding: 1.25rem;
   max-width: 90ch;
+}
+.readme-text {
+  white-space: pre-wrap;
+}
+.jump-to-task {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--task-bg);
+  border: 1px solid var(--task-border);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* The exercise task: highlighted so it stands out whether you read the README first or not. */
+.task {
+  white-space: pre-wrap;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  background: var(--task-bg);
+  border: 1px solid var(--task-border);
+  border-left-width: 6px;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  scroll-margin-top: 1rem;
+}
+.task-panel {
+  max-width: 90ch;
+  margin: 1rem 0;
+}
+.task-panel summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 .panes {
   display: grid;

@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense, useEffect, useState, type MouseEvent } from 'react'
 import { exercises } from './exercises/registry'
 import { ShellErrorBoundary } from './shell/ShellErrorBoundary'
 
@@ -20,6 +20,14 @@ function useHashSlug(fallback: string) {
     return () => window.removeEventListener('hashchange', onChange)
   })
   return slug
+}
+
+const TASK_HEADING_LINE = /^## .*\n+/
+
+/** The #hash selects the exercise, so scroll to the task in code instead of changing the hash. */
+function scrollToTask(e: MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault()
+  document.getElementById('task')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 function readStoredView(): View {
@@ -47,7 +55,7 @@ export default function App() {
 
   if (!current) return <p>No exercises found in src/exercises.</p>
 
-  const { Exercise, Solution } = current
+  const { Exercise, Solution, parts } = current
 
   return (
     <div className="shell">
@@ -88,30 +96,51 @@ export default function App() {
         </header>
 
         {view === 'readme' ? (
-          <article className="readme">{current.readme}</article>
+          <article className="readme">
+            {parts.task && (
+              <a className="jump-to-task" href="#task" onClick={scrollToTask}>
+                ↓ Jump to your task
+              </a>
+            )}
+            <div className="readme-text">{parts.before}</div>
+            {parts.task && (
+              <section id="task" className="task" aria-label="Your task">
+                {parts.task}
+              </section>
+            )}
+            {parts.after && <div className="readme-text">{parts.after}</div>}
+          </article>
         ) : (
-          <div className={view === 'compare' ? 'panes two' : 'panes'}>
-            {(view === 'exercise' || view === 'compare') && (
-              <section className="pane" aria-label="My code">
-                {view === 'compare' && <h3>My code</h3>}
-                <ShellErrorBoundary key={`${current.slug}-mine`}>
-                  <Suspense fallback={<p>Loading…</p>}>
-                    <Exercise />
-                  </Suspense>
-                </ShellErrorBoundary>
-              </section>
+          <>
+            {parts.task && view !== 'solution' && (
+              <details className="task task-panel" open>
+                <summary>Your task (full explanation in the README tab)</summary>
+                {parts.task.replace(TASK_HEADING_LINE, '')}
+              </details>
             )}
-            {(view === 'solution' || view === 'compare') && (
-              <section className="pane" aria-label="Solution">
-                {view === 'compare' && <h3>Solution</h3>}
-                <ShellErrorBoundary key={`${current.slug}-solution`}>
-                  <Suspense fallback={<p>Loading…</p>}>
-                    <Solution />
-                  </Suspense>
-                </ShellErrorBoundary>
-              </section>
-            )}
-          </div>
+            <div className={view === 'compare' ? 'panes two' : 'panes'}>
+              {(view === 'exercise' || view === 'compare') && (
+                <section className="pane" aria-label="My code">
+                  {view === 'compare' && <h3>My code</h3>}
+                  <ShellErrorBoundary key={`${current.slug}-mine`}>
+                    <Suspense fallback={<p>Loading…</p>}>
+                      <Exercise />
+                    </Suspense>
+                  </ShellErrorBoundary>
+                </section>
+              )}
+              {(view === 'solution' || view === 'compare') && (
+                <section className="pane" aria-label="Solution">
+                  {view === 'compare' && <h3>Solution</h3>}
+                  <ShellErrorBoundary key={`${current.slug}-solution`}>
+                    <Suspense fallback={<p>Loading…</p>}>
+                      <Solution />
+                    </Suspense>
+                  </ShellErrorBoundary>
+                </section>
+              )}
+            </div>
+          </>
         )}
       </main>
     </div>
