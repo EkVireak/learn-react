@@ -6,7 +6,7 @@ type State = { error: Error | null }
 /**
  * Keeps one broken exercise from crashing the whole app.
  * Give it a `key` to reset it (React remounts it when the key changes).
- * (Error boundaries must still be class components — see exercise 14.)
+ * (Error boundaries must still be class components — see exercise 15.)
  */
 export class ShellErrorBoundary extends Component<Props, State> {
   state: State = { error: null }

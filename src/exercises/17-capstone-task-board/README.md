@@ -1,10 +1,10 @@
-# 16 – Capstone: Task Board
+# 17 – Capstone: Task Board
 
 ## Why this matters
 
 Time to build a small but realistic feature end-to-end, the way you would on the job: you get a
 ticket with user stories and acceptance criteria, an API, and you decide the component structure.
-It uses everything from 01–15: components, props, state, forms + Zod, routing, context + reducer,
+It uses everything from 01–16: components, props, state, forms + Zod, routing, API calls, context + reducer,
 TanStack Query, accessibility and tests.
 
 ## Setup
@@ -18,12 +18,12 @@ npm run dev     # in another terminal
 
 ## The ticket
 
-> **TASK-16: Task board MVP**
+> **TASK-17: Task board MVP**
 > As a team member I want a simple Kanban board so that I can track what everyone is working on.
 
 ### User stories & acceptance criteria
 
-The tests (`npm test -- 16`) check exactly these, so use the given labels/text.
+The tests (`npm test -- 17`) check exactly these, so use the given labels/text.
 
 1. **See the board** — at `/`
    - Heading **"Task Board"**.
@@ -49,7 +49,7 @@ The tests (`npm test -- 16`) check exactly these, so use the given labels/text.
 
 ### Definition of done
 
-- `npm run typecheck`, `npm run lint` and `npm test -- 16` pass.
+- `npm run typecheck`, `npm run lint` and `npm test -- 17` pass.
 - Works with keyboard only. No console errors/warnings.
 - Components are small and focused (suggested structure below).
 
@@ -79,5 +79,5 @@ The reference implementation is in `Solution.tsx` + `solution/` — look only af
 
 ## Read more
 
-- Re-read the READMEs of exercises 06, 09, 10, 11, 13.
+- Re-read the READMEs of exercises 06, 09, 10, 11, 13, 14.
 - https://github.com/typicode/json-server

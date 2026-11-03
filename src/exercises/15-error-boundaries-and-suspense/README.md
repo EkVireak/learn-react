@@ -1,4 +1,4 @@
-# 14 – Error boundaries, Suspense & lazy loading
+# 15 – Error boundaries, Suspense & lazy loading
 
 ## Why this matters
 
@@ -47,7 +47,7 @@ React Router, TanStack Query's suspense mode, the `use()` hook).
    `<Suspense fallback={<p>Loading chart…</p>}>`. Check the Network tab in `npm run dev`: the chunk
    loads only when you click.
 
-Run `npm test -- 14`.
+Run `npm test -- 15`.
 
 ## Stretch goals
 

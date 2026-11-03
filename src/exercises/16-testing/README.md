@@ -1,4 +1,4 @@
-# 15 – Testing React components
+# 16 – Testing React components
 
 ## Why this matters
 
@@ -38,7 +38,7 @@ Fill in every `it.todo` in `Exercise.test.tsx` (turn them into real `it(...)` te
 3. **UserCard** (`UserCard.tsx`): mock `fetch` to test loading state, success (name, avatar alt,
    followers) and the 404 → `"User not found"` path. Assert the URL that was requested.
 
-Run `npm test -- 15`. Try breaking the component on purpose — does a test fail? If not, the test
+Run `npm test -- 16`. Try breaking the component on purpose — does a test fail? If not, the test
 isn't testing much. Then compare with `Solution.test.tsx`.
 
 ## Stretch goals

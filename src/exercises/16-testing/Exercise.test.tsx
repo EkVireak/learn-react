@@ -1,4 +1,4 @@
-// Exercise 15 – write these tests! Replace each `it.todo('...')` with `it('...', async () => { ... })`.
+// Exercise 16 – write these tests! Replace each `it.todo('...')` with `it('...', async () => { ... })`.
 // Reference: Solution.test.tsx (try on your own first).
 import { describe, it } from 'vitest'
 // Useful imports — uncomment as you need them:
@@ -9,7 +9,7 @@ import { describe, it } from 'vitest'
 // import { useCounter } from './useCounter'
 // import { UserCard } from './UserCard'
 
-describe('15 – TodoApp', () => {
+describe('16 – TodoApp', () => {
   // Hint: render(<TodoApp />), then use screen.getByLabelText('New todo'),
   //       screen.getByRole('checkbox', { name: 'Learn state' }), etc.
   it.todo('shows the initial todos and "1 item left"')
@@ -20,7 +20,7 @@ describe('15 – TodoApp', () => {
   it.todo('filters Active / Completed')
 })
 
-describe('15 – useCounter', () => {
+describe('16 – useCounter', () => {
   // Hint: const { result } = renderHook(() => useCounter({ min: 0, max: 2 }))
   //       act(() => result.current.increment()); expect(result.current.count).toBe(1)
   it.todo('starts at the initial value')
@@ -29,7 +29,7 @@ describe('15 – useCounter', () => {
   it.todo('resets to the initial value')
 })
 
-describe('15 – UserCard', () => {
+describe('16 – UserCard', () => {
   // Hint: vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response(JSON.stringify({...}))))
   //       then render(<UserCard username="ada" />) and `await screen.findBy...`
   it.todo('shows a loading state first')

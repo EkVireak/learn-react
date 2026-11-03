@@ -7,7 +7,7 @@ function Boom(): never {
   throw new Error('kaboom')
 }
 
-describe('14 – ErrorBoundary', () => {
+describe('15 – ErrorBoundary', () => {
   it('renders the fallback with the error and logs it', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {})
     render(
@@ -36,7 +36,7 @@ describe('14 – ErrorBoundary', () => {
   })
 })
 
-describe('14 – lazy + Suspense', () => {
+describe('15 – lazy + Suspense', () => {
   it('loads the chart on demand behind a Suspense fallback', async () => {
     const user = userEvent.setup()
     render(<Dashboard />)

@@ -1,4 +1,4 @@
-// Exercise 14 – Error boundaries, Suspense & lazy loading
+// Exercise 15 – Error boundaries, Suspense & lazy loading
 import { Component, type ReactNode } from 'react'
 import { BuggyCounter } from './Buggy'
 

@@ -1,4 +1,4 @@
-// Exercise 13 – Server state with TanStack Query
+// Exercise 14 – Server state with TanStack Query
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useState } from 'react'
 
@@ -28,7 +28,7 @@ export function PostsPanel() {
 
 const queryClient = new QueryClient()
 
-export default function Exercise13() {
+export default function () {
   return (
     <QueryClientProvider client={queryClient}>
       <PostsPanel />

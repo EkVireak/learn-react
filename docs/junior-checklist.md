@@ -80,4 +80,4 @@ are good practice for these. Redo them from scratch without looking.
 6. **Storybook** for building components in isolation.
 7. Performance: React DevTools Profiler, the React Compiler, Lighthouse, Core Web Vitals.
 8. Build and **deploy** 2–3 portfolio projects (Vercel/Netlify) with a clear README, tests, and a live link.
-   The capstone (16) is a good start: extend it and put it on GitHub.
+   The capstone (17) is a good start: extend it and put it on GitHub.

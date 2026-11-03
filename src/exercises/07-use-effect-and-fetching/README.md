@@ -22,7 +22,7 @@ ones (race conditions), and setting state after unmount.
   twice, it's missing cleanup. (This is why you may see two requests in the Network tab.)
 - **You might not need an effect**: computing values from props/state, or reacting to a click,
   does **not** need `useEffect`. Do it during render or in the event handler.
-- In real projects, fetching is usually done by a library (TanStack Query → exercise 13), but
+- In real projects, fetching is usually done by a library (TanStack Query → exercise 14), but
   you must understand what it does for you.
 
 ## Common mistakes

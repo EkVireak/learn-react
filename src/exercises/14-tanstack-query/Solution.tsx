@@ -1,4 +1,4 @@
-// Solution 13 – Server state with TanStack Query
+// Solution 14 – Server state with TanStack Query
 import {
   QueryClient,
   QueryClientProvider,
@@ -75,7 +75,7 @@ export function PostsPanel() {
 
 const queryClient = new QueryClient()
 
-export default function Solution13() {
+export default function () {
   return (
     <QueryClientProvider client={queryClient}>
       <PostsPanel />

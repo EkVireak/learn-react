@@ -45,7 +45,7 @@ Run `npm test -- 10`.
 ## Stretch goals
 
 - A **"Buy"** button on the detail page that `navigate('/thanks')`s to a new route.
-- Lazy-load `ProductDetail` (you'll learn `lazy` in exercise 14).
+- Lazy-load `ProductDetail` (you'll learn `lazy` in exercise 15).
 
 ## Read more
 

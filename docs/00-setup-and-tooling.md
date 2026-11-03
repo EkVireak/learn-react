@@ -85,5 +85,6 @@ git push -u origin feat/todo-filter # then open a Pull Request
 
 ## Environment variables
 
-Vite exposes variables prefixed with `VITE_` via `import.meta.env.VITE_API_URL`. Put local values in
-`.env.local` (git-ignored). **Never put secrets in frontend env vars.** Everything ships to the browser.
+Vite exposes variables prefixed with `VITE_` via `import.meta.env.VITE_API_URL`. The repo commits
+only `.env.example` (a template). Copy it to `.env` (`cp .env.example .env`) and put your values
+there. `.env` and `.env.*` are git-ignored. **Never put secrets in frontend env vars.** Everything ships to the browser.

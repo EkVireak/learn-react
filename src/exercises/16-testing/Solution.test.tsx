@@ -1,4 +1,4 @@
-// Solution 15 – reference tests
+// Solution 16 – reference tests
 import { act, render, renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
@@ -6,7 +6,7 @@ import TodoApp from '../06-lifting-state/Solution'
 import { useCounter } from './useCounter'
 import { UserCard } from './UserCard'
 
-describe('15 (solution) – TodoApp', () => {
+describe('16 (solution) – TodoApp', () => {
   it('shows the initial todos and "1 item left"', () => {
     render(<TodoApp />)
     expect(screen.getByRole('checkbox', { name: 'Learn JSX' })).toBeChecked()
@@ -58,7 +58,7 @@ describe('15 (solution) – TodoApp', () => {
   })
 })
 
-describe('15 (solution) – useCounter', () => {
+describe('16 (solution) – useCounter', () => {
   it('starts at the initial value', () => {
     const { result } = renderHook(() => useCounter({ initial: 5 }))
     expect(result.current.count).toBe(5)
@@ -89,7 +89,7 @@ describe('15 (solution) – useCounter', () => {
   })
 })
 
-describe('15 (solution) – UserCard', () => {
+describe('16 (solution) – UserCard', () => {
   const ada = {
     login: 'ada',
     name: 'Ada Lovelace',

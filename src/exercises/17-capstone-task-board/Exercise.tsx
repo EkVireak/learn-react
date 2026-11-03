@@ -1,4 +1,4 @@
-// Exercise 16 – Capstone: Task Board. Read README.md — it's your ticket.
+// Exercise 17 – Capstone: Task Board. Read README.md — it's your ticket.
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { MemoryRouter, Route, Routes } from 'react-router'
 

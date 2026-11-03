@@ -1,4 +1,4 @@
-// Exercise 15 – the work for this exercise is in Exercise.test.tsx!
+// Exercise 16 – the work for this exercise is in Exercise.test.tsx!
 // This page just shows the components you are testing.
 import TodoApp from '../06-lifting-state/Solution'
 import { useCounter } from './useCounter'
@@ -18,7 +18,7 @@ export default function TestingPlayground() {
   return (
     <div style={{ display: 'grid', gap: 24 }}>
       <p>
-        Open <code>src/exercises/15-testing/Exercise.test.tsx</code> and write the tests. These are
+        Open <code>src/exercises/16-testing/Exercise.test.tsx</code> and write the tests. These are
         the components under test:
       </p>
       <TodoApp />

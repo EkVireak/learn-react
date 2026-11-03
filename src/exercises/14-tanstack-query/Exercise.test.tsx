@@ -35,7 +35,7 @@ function fakeApi({ failGet = false, failPost = false } = {}) {
   return fetchMock
 }
 
-describe('13 – PostsPanel', () => {
+describe('14 – PostsPanel', () => {
   it('loads posts and refetches by user', async () => {
     fakeApi()
     const user = userEvent.setup()

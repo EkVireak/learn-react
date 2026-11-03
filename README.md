@@ -10,6 +10,7 @@ TanStack Query · Zod · oxlint · Prettier
 
 ```bash
 npm install
+cp .env.example .env   # optional: only needed if you want to change the defaults
 npm run dev        # open the URL it prints (usually http://localhost:5173)
 ```
 
@@ -37,45 +38,47 @@ Tests fail on the untouched starter code. That's expected: making them pass is t
 
 ## Roadmap
 
-| #                            | Topic                               | You'll build                                                |
-| ---------------------------- | ----------------------------------- | ----------------------------------------------------------- |
-| **Part 1: Fundamentals**     |                                     |                                                             |
-| 01                           | JSX & components                    | Profile card                                                |
-| 02                           | Props & TypeScript types            | Typed `Button` and `Card`                                   |
-| 03                           | State with `useState`               | Counter, toggle, like button                                |
-| 04                           | Events & controlled inputs          | Tweet box with a character counter                          |
-| 05                           | Lists, keys & conditional rendering | Filterable, sortable fruit list                             |
-| 06                           | Lifting state & data flow           | Todo app                                                    |
-| **Part 2: Effects & hooks**  |                                     |                                                             |
-| 07                           | `useEffect` & data fetching         | Posts loader with abort and retry                           |
-| 08                           | `useRef`, `useMemo`, custom hooks   | `useDebounce`, `useLocalStorage`, notes search              |
-| 09                           | Forms & validation (actions + Zod)  | Accessible sign-up form                                     |
-| **Part 3: App architecture** |                                     |                                                             |
-| 10                           | Routing (React Router)              | Shop with nested routes and a 404 page                      |
-| 11                           | Context & `useReducer`              | Theme switcher and shopping cart                            |
-| 12                           | Styling & accessibility             | Accessible modal (CSS Modules, portal, focus)               |
-| 13                           | Server state (TanStack Query)       | Posts with queries and mutations                            |
-| 14                           | Error boundaries, Suspense, `lazy`  | Crash-proof dashboard with a lazy chart                     |
-| 15                           | Testing React                       | You write the tests                                         |
-| **Part 4: Capstone**         |                                     |                                                             |
-| 16                           | Task Board                          | A Kanban app built from a "ticket" with acceptance criteria |
+| #                            | Topic                                                        | You'll build                                                |
+| ---------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| **Part 1: Fundamentals**     |                                                              |                                                             |
+| 01                           | JSX & components                                             | Profile card                                                |
+| 02                           | Props & TypeScript types                                     | Typed `Button` and `Card`                                   |
+| 03                           | State with `useState`                                        | Counter, toggle, like button                                |
+| 04                           | Events & controlled inputs                                   | Tweet box with a character counter                          |
+| 05                           | Lists, keys & conditional rendering                          | Filterable, sortable fruit list                             |
+| 06                           | Lifting state & data flow                                    | Todo app                                                    |
+| **Part 2: Effects & hooks**  |                                                              |                                                             |
+| 07                           | `useEffect` & data fetching                                  | Posts loader with abort and retry                           |
+| 08                           | `useRef`, `useMemo`, custom hooks                            | `useDebounce`, `useLocalStorage`, notes search              |
+| 09                           | Forms & validation (actions + Zod)                           | Accessible sign-up form                                     |
+| **Part 3: App architecture** |                                                              |                                                             |
+| 10                           | Routing (React Router)                                       | Shop with nested routes and a 404 page                      |
+| 11                           | Context & `useReducer`                                       | Theme switcher and shopping cart                            |
+| 12                           | Styling & accessibility                                      | Accessible modal (CSS Modules, portal, focus)               |
+| 13                           | API integration (GET/POST/PUT/PATCH/DELETE, API key + token) | Contacts manager with login and a typed API client          |
+| 14                           | Server state (TanStack Query)                                | Posts with queries and mutations                            |
+| 15                           | Error boundaries, Suspense, `lazy`                           | Crash-proof dashboard with a lazy chart                     |
+| 16                           | Testing React                                                | You write the tests                                         |
+| **Part 4: Capstone**         |                                                              |                                                             |
+| 17                           | Task Board                                                   | A Kanban app built from a "ticket" with acceptance criteria |
 
-Suggested pace: about one exercise per day, with two days each for 06, 13 and 16. That's
-roughly 3–4 weeks part-time.
+Suggested pace: about one exercise per day, with two days each for 06, 13, 14 and 17. That's
+roughly 4 weeks part-time.
 
 ## Scripts
 
-| Command                  | What it does                                                        |
-| ------------------------ | ------------------------------------------------------------------- |
-| `npm run dev`            | Start the dev server with hot reload                                |
-| `npm test -- 05`         | Run the tests for exercise 05 in watch mode                         |
-| `npm run test:run`       | Run all tests once                                                  |
-| `npm run test:solutions` | Run all tests against the reference solutions (should be all green) |
-| `npm run typecheck`      | Type-check the whole project                                        |
-| `npm run lint`           | Lint with oxlint (catches hook mistakes, impure renders…)           |
-| `npm run format`         | Format everything with Prettier                                     |
-| `npm run build`          | Type-check and build for production                                 |
-| `npm run api`            | Start the fake REST API for exercise 16 (port 3001)                 |
+| Command                  | What it does                                                              |
+| ------------------------ | ------------------------------------------------------------------------- |
+| `npm run dev`            | Start the dev server with hot reload                                      |
+| `npm test -- 05`         | Run the tests for exercise 05 in watch mode                               |
+| `npm run test:run`       | Run all tests once                                                        |
+| `npm run test:solutions` | Run all tests against the reference solutions (should be all green)       |
+| `npm run typecheck`      | Type-check the whole project                                              |
+| `npm run lint`           | Lint with oxlint (catches hook mistakes, impure renders…)                 |
+| `npm run format`         | Format everything with Prettier                                           |
+| `npm run build`          | Type-check and build for production                                       |
+| `npm run api:contacts`   | Start the Contacts API for exercise 13 (port 3002, needs API key + token) |
+| `npm run api`            | Start the fake REST API for exercise 17 (port 3001)                       |
 
 ## Also read
 

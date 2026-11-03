@@ -34,7 +34,7 @@ as Redux, which you'll meet in many existing codebases.
   ```
   TypeScript then knows exactly which fields exist inside each `case`.
 - Context + reducer is a common "lightweight global store". For larger apps teams reach for
-  Zustand, Redux Toolkit, or server-state libraries (exercise 13).
+  Zustand, Redux Toolkit, or server-state libraries (exercises 13–14).
 
 ## Your task
 

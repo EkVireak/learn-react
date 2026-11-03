@@ -89,7 +89,7 @@ function renderApp(path = '/') {
 
 const column = (name: string) => screen.getByRole('region', { name: new RegExp(`^${name}`) })
 
-describe('16 – Capstone: board', () => {
+describe('17 – Capstone: board', () => {
   it('1. shows tasks in three labelled columns', async () => {
     fakeApi()
     renderApp()
@@ -177,7 +177,7 @@ describe('16 – Capstone: board', () => {
   })
 })
 
-describe('16 – Capstone: details', () => {
+describe('17 – Capstone: details', () => {
   it('5. opens details from the board and deletes the task', async () => {
     fakeApi()
     const { user } = renderApp()

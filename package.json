@@ -13,7 +13,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:solutions": "vitest run --mode solution",
-    "api": "[ -f db.json ] || cp src/exercises/16-capstone-task-board/db.seed.json db.json; json-server --port 3001 db.json"
+    "api": "[ -f db.json ] || cp src/exercises/17-capstone-task-board/db.seed.json db.json; json-server --port 3001 db.json",
+    "api:contacts": "node --experimental-strip-types --no-warnings server/contacts-api.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.105.3",

@@ -25,3 +25,8 @@ dist-ssr
 
 # json-server working copy (seeded from db.seed.json)
 db.json
+
+# Environment files: keep real values out of git, share the template only
+.env
+.env.*
+!.env.example

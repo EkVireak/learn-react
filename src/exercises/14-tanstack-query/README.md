@@ -1,4 +1,4 @@
-# 13 – Server state with TanStack Query
+# 14 – Server state with TanStack Query
 
 ## Why this matters
 
@@ -48,7 +48,7 @@ in React job listings.
    - on error show `Could not create post`.
 4. Compare your code size with exercise 07!
 
-Run `npm test -- 13`.
+Run `npm test -- 14`.
 
 ## Stretch goals
 

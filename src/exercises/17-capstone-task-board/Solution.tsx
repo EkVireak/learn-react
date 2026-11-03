@@ -1,4 +1,4 @@
-// Solution 16 – Capstone: Task Board (see ./solution for the pieces)
+// Solution 17 – Capstone: Task Board (see ./solution for the pieces)
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Link, MemoryRouter, Route, Routes } from 'react-router'
 import './solution/board.css'

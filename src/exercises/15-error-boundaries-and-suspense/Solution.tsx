@@ -1,4 +1,4 @@
-// Solution 14 – Error boundaries, Suspense & lazy loading
+// Solution 15 – Error boundaries, Suspense & lazy loading
 import { Component, lazy, Suspense, useState, type ErrorInfo, type ReactNode } from 'react'
 import { BuggyCounter } from './Buggy'
 

@@ -10,10 +10,10 @@ afterEach(() => {
 })
 
 describe('App shell', () => {
-  it('lists all 16 exercises and shows the first README', () => {
+  it('lists all 17 exercises and shows the first README', () => {
     render(<App />)
     const nav = screen.getByRole('navigation', { name: 'Exercises' })
-    expect(within(nav).getAllByRole('link')).toHaveLength(16)
+    expect(within(nav).getAllByRole('link')).toHaveLength(17)
     expect(
       screen.getByRole('heading', { level: 2, name: /01\. JSX & Components/ }),
     ).toBeInTheDocument()
